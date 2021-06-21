@@ -1,0 +1,11 @@
+build
+sbuild
+work
+alib-52
+*.log
+*.ddc
+*.svf
+*.lck
+FM_WORK
+formality_svf
+*.txt

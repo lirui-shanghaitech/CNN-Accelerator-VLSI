@@ -1,0 +1,20 @@
+all: clean comp sim
+
+OUTPUT=tb_counter
+LIB_PATH_HUALI=/home/tools/PDK/55lp_pdk_std_io/IH55LP_HS_V2p5b_basic_20190730/IH55LP_HS_V2p5b_basic/IH55LP_HS_RVT_V2p5b/verilog
+comp:
+	vcs -full64 +v2k \
+	-debug_access+all \
+	-timescale=1ns/1ns \
+	+neg_chk \
+	-f ../filelist_s.f \
+	-l com.log -q
+
+sim:
+	./simv -l sim.log -q
+
+sim_g:
+	./simv -gui
+
+clean: 
+	rm -rf csrc DVEfiles *.vpd simv simv* ucli.key vc_hdrs.h urg* *.log *.dump
