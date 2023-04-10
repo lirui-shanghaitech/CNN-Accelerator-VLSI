@@ -7,12 +7,12 @@ module PSUM_ADD #(
 ) (
     input clk,
     input rst_n,
-    input signed [data_width-1:0] pe0_data,
-    input signed [data_width-1:0] pe1_data,
-    input signed [data_width-1:0] pe2_data,
-    input signed [data_width-1:0] pe3_data,
-    input signed [data_width-1:0] fifo_data,
-    output signed [data_width-1:0] out
+    input wire signed [data_width-1:0] pe0_data,
+    input wire signed [data_width-1:0] pe1_data,
+    input wire signed [data_width-1:0] pe2_data,
+    input wire signed [data_width-1:0] pe3_data,
+    input wire signed [data_width-1:0] fifo_data,
+    output wire signed [data_width-1:0] out
 );
 
     reg signed [data_width-1:0] psum0;
